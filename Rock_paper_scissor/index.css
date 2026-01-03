@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Outfit:wght@100..900&family=Pixelify+Sans:wght@400..700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Pixelify Sans';
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('/images/Pixel\ Sunset\ 🌅.jpg');
+  
+}
+
+.container {
+  padding: 2vw 10vw;
+  border-radius: 14px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  background-color: #dfd1ff;
+}
+
+.result_field {
+  margin-top: 0.5rem;
+  column-gap: 2px;
+}
+.images {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  column-gap: 10rem;
+}
+
+.container.start .user_result {
+  transform-origin: left;
+  animation: userShake 0.7s ease infinite;
+}
+@keyframes userShake {
+  50% {
+    transform: rotate(10deg);
+  }
+}
+
+.container.start .cpu_result {
+  transform-origin: right;
+  animation: cpuShake 0.7s ease infinite;
+}
+@keyframes cpuShake {
+  50% {
+    transform: rotate(-10deg);
+  }
+}
+
+
+.images img {
+  margin-top: 2rem;
+  width: 100px;
+}
+
+.user_result img {
+  transform: rotate(90deg);
+}
+
+.cpu_result img {
+  transform: rotate(-90deg) rotateY(180deg);
+}
+
+.result {
+  text-align: center;
+  font-weight: 300;
+  font-size: 2rem;
+  margin-top: 2rem;
+}
+
+.option_images {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 3rem;
+  column-gap: 10rem;
+}
+
+.container.start .option_images {
+  pointer-events: none;
+}
+
+.option_image{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  gap: 1rem;
+  opacity: 0.5;   /* Sets the initial transparency of the item to 50% (semi-transparent). */
+  transition: opacity 0.3s ease;  /* Adds a smooth animation effect: any change to the opacity property will take 
+              0.3 seconds with an "ease" timing (starts slow, speeds up, then slows down). */
+}
+
+.option_image:hover{
+  opacity: 1;   /* Increases the opacity to fully opaque (100%) on hover, 
+              making the item appear brighter/more visible. */
+}
+
+.option_image img{
+  width: 60px;
+  pointer-events: none;   /* Disables mouse interactions (like clicks or hovers) directly on the image itself, 
+                        so events pass through to the parent container instead. */
+}
+
+.option_image p{
+  font-size: larger;
+  font-weight: 800;
+  color: #7679bb;
+  pointer-events: none;
+}
+
+
+
+

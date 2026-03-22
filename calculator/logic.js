@@ -1,7 +1,6 @@
 //functioning of backspace
 //limit the number of digits and decimal places
 
-
 //variables needed
 var a="",b="";
 var sign="";
@@ -12,7 +11,7 @@ function operate()
 	switch(sign)
 	{
 		case '+':
-			a=String(Number(a)+Number(b))
+			a=String(Number(a)+Number(b))	// takes 2 input and make it string
 			document.getElementById('numdisplay').innerHTML=a;
 			b="";sign="";
 			break;

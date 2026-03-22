@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --primary-background-color: black;
+    --card-background: #2ecc71;
+    --card-foreground: #1e1e3f;
+    --border: #2e2e5e;
+    --text: #8085a6;
+    --ring: #ff00c8;
+
+    --max-width: 1200px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+header h1{
+    font-weight: 500;
+    font-size: 3rem;
+    text-align: center;
+    line-height: 4rem;
+}
+
+h3{
+    font-weight: 400;
+    text-align: center;
+    line-height: 7rem;
+}
+
+.container{
+    background-color: var(--primary-background-color);
+}
+
+.post{
+    margin: 20px 20px;
+    display: grid;
+    grid-template-columns: repeat(3, .5fr);
+}
+
+.card{
+    background-color: var(--card-foreground);
+    border: 1px solid var(--border);
+    border-radius: 0.5rem;
+    margin: 20px 20px;
+}
+
+.card img{
+    align-items: center;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.card_name{
+    padding: 1rem;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.card_name img{
+    font-weight: 500;
+    color: var(--card-background);
+    width: 20px;
+    height: 15px;
+}
+
+.card_name span{
+    color: var(--ring);
+    font-style: italic;
+}
+
+.banner{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))
+    , url('/practice/images/download.jpg');
+    
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.banner .section_container{
+    padding: 8.5rem 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.banner_content{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+}
+
+.banner_content h2{
+    color: white;
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+.banner_content p{
+    color: white;
+}
+
+.banner_content button{
+    padding: 1rem 1.5rem;
+    outline: none;
+    border: 1px;
+    background-color: var(--ring);
+    color: white;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+@media (min-width: 768px){
+    .banner .section_container{
+        justify-content: flex-end;
+    }
+
+    .banner_content{
+        align-items: flex-end;
+        text-align: right;
+        max-width: 800px;
+    }
+}
+
+
+
+
+
+
+

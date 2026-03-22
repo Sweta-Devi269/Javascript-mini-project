@@ -67,7 +67,7 @@ That's why we need two loops. */
       let randomNumber = Math.floor(Math.random() * 3);
       
       //Create an array of CPU image
-      let cpuImage = ["/images/rock.png", "/images/paper.png","/images/scissors.png"];
+      let cpuImage = ["images/rock.png", "images/paper.png","images/scissors.png"];
       cpuResult.src = cpuImage[randomNumber];
 
       //Assign a letter to the cpu value (R for rock, P for papaer, S for scissor)

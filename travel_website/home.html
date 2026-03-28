@@ -12,69 +12,52 @@
   </head>
   <body>
 
-    <header class="header">
-
-      <nav class="nav">
+      <nav id="navbar">
         <a href="" class="nav_logo">Travel.co</a>
 
-        <div class="nav_menu" id="nav-menu">
-          <ul class="nav_list">
+        <!--  Desktop Menu -->
+          <div class="nav-links">
+            <a href="#" class="nav-link active">Explore</a>
+            <a href="#" class="nav-link">Cities</a>
+            <a href="#" class="nav-link">Nightlife</a>
+            <a href="#" class="nav-link">Bookings</a>
+          </div>
 
-            <!-- Navigation menu -->
-            <li class="nav_item">
-              <a href="#" class="nav_link">
-                <span>Home</span>
-              </a>
-            </li>
-
-            <li class="nav_item">
-              <a href="#" class="nav_link">
-                <span>Destination</span>
-              </a>
-            </li>
-
-            <li class="nav_item">
-              <a href="#" class="nav_link">
-                <span>Hotels</span>
-              </a>
-            </li>
-
-            <li class="nav_item">
-              <a href="#" class="nav_link">
-                
-                <span>Flights</span>
-              </a>
-            </li>
-
-            <li class="nav_item">
-              <a href="#" class="nav_link">
-               
-                <span>Bookings</span>
-              </a>
-            </li>
-
-            <li class="nav_item">
-              <div class="login_button">
-                <button>Login</button>
-              </div>
-            </li>
-
-            <li class="nav_item">
-              <div class="registration_button">
-                <button>Sign Up</button>
-              </div>
-            </li>
-          </ul>
+          <!-- Consist of search bar and sign in and login option -->
+          <div class="nav-actions">
+            <!--  Search bar  -->
+            <div class="search-bar">
+                <i data-lucide="search" style="width: 1rem; height: 1rem; margin-right: 0.5rem; color: var(--color-outline);"></i>
+                <input type="text" placeholder="Search the night...">
+            </div>
+            <!--  Buttons -->
+            <button class="btn-signin">Sign In</button>
+            <button class="btn-signup">Sign Up</button>
+            <!--  Mobile menu button  -->
+            <button class="mobile-menu-btn" id="menu-toggle">
+                <i class="ri-menu-line"></i>
+            </button>
         </div>
+
+        <!-- Mobile Menu Overlay -->
+          <div class="mobile-menu" id="mobile-menu">
+            <a href="#" class="nav-link">Explore</a>
+            <a href="#" class="nav-link">Cities</a>
+            <a href="#" class="nav-link">Nightlife</a>
+            <a href="#" class="nav-link">Bookings</a>
+          </div>
+
       </nav>
-    </header>
     
     <main>
+      <!-- Hero Section -->
       <section class="home">
-        <div class="section_container">
+
           <div class="section_content">
-            <h1>Redefining the Way You Experience Travel</h1>
-            <p>
+            <h1 class="title">
+              Redefining the Way<br> <span> You Experience Travel</span>
+            </h1>
+            <p class="description">
               Step into a world of extraordinary travel experiences and discover destinations 
               that captivate the soul. With our expert insights, professional tour guidance, 
               and attention to detail, we bring you journeys that go beyond the ordinary. 
@@ -82,109 +65,157 @@
               allowing you to explore with confidence, comfort, and peace of mind. 
               Let us transform your travel dreams into meaningful and memorable experiences.
             </p>
-            <button>Find out more</button>
+            
+            <div class="action">
+               <button class="btn-primary">Launch Explorer</button>
+                <button class="btn-outline">View Hotspots</button>
+            </div>
+
           </div>
-        </div>
       </section>
 
-      <br><br><hr>
-      <h4><i>Top Selling</i></h4>
-      <h3>Top Destination</h3>
+      <!--  City Collection -->
 
-      <section class="container">
-        <div class="post">
-          <div class="card">
-          <a href="#">
+      <section class="collection">
+        <!--  Collection-Header section -->
+        <div class="collection-header">
+          <div>
+            <h2 class="collection-title">Top Destination</h2>
+            <h3 class="collection-subtitle">Explore our top Destination</h3>
+          </div>
+          <a href="#" class="view-all">
+            View All Destination <i class="ri-arrow-right-line"></i>
+          </a>
+        </div>
+
+        <div class="city-gallery">
+
+<!--  The city-card-tag class defines the shape and size, but it works with modifier classes to change the color based on the vibe of the city:
+.live: Turns the text Neon Lime (Tertiary color).
+.refined: Turns the text Neon Purple (Secondary color).
+.standard: Turns the text Electric Cyan (Primary color).  -->
+
+  <!-- Summary of the "Stack"
+  If you looked at the card from the side, the layers would look like this:
+    Bottom: The City Image
+    Middle: The Dark Gradient Overlay (city-card-overlay)
+    Top: The Content Container (city-card-content) which holds the status-dot and text.-->
+
+          <!--  China   -->
+          <div class="city-card">
             <img src="/images/China.jpg" alt="China">
-          </a>
-          <div class="card_name">
-            <img width="50" height="50" src="https://img.icons8.com/ios/50/marker--v1.png" 
-              alt="marker--v1"/>
-            <span>China</span>
-          </div>
-        </div>
 
-        <div class="card">
-          <a href="#">
+              <div class="city-card-overlay">
+                <!-- The Dark Gradient Overlay (city-card-overlay) -->
+              </div> 
+              <div class="city-card-content">
+                  <div class="city-card-tag live">
+                      <span class="status-dot"></span>
+                        Live Now
+                  </div>  <!-- end of city-card-tag live-->
+              </div>  <!-- city-card-content -->
+              <h3 class="city-card-title"><i class="ri-map-pin-line"></i>China</h3>
+              <p class="city-card-description">Imagine the red glow of a traditional paper lantern reflecting off the chrome surface of a delivery drone.</p>
+              <button class="btn-explore">Explore District</button> <!-- it will take us to google map where
+              we will explore different districts -->
+          </div>  <!-- City-card -->
+
+              <!--  Singapore -->
+          <div class="city-card">
             <img src="/images/Singapore.jpg" alt="Singapore">
-          </a>
-          <div class="card_name">
-            <img width="50" height="50" src="https://img.icons8.com/ios/50/marker--v1.png" alt="marker--v1"/>
-            <span>Singapore</span>
+            <div class="city-card-overlay"></div>
+            <div class="city-card-content">
+              <div class="city-card-tag refined">Best Seller Trip</div>
+              <div class="city-card-title">
+                <i class="ri-map-pin-line"></i>
+                Singapore
+              </div>
+              <div class="city-card-description">Neon-lit skylines meet humid hawker heat in a sleek, fast-paced rush of craft bars and jungle vibes.</div>
+              <button class="btn-explore">Explore District</button>
+            </div>  <!-- City-card-content -->
           </div>
-        </div>
 
-        <div class="card">
-          <a href="#">
+          <!-- Bangkok, Thailand -->
+          <div class="city-card">
             <img src="images/Bangkok, Thailand.jpg" alt="Bangkok">
-          </a>
-          <div class="card_name">
-            <img width="50" height="50" src="https://img.icons8.com/ios/50/marker--v1.png" alt="marker--v1"/>
-            <span>Bangkok, Thailand</span>
+            <div class="city-card-overlay"></div>
+            <div class="city-card-content">
+              <div class="city-card-tag standard">Best Seller</div>
+              <div class="city-card-title"><i class="ri-map-pin-line"></i>Bangkok, Thailand</div>
+              <div class="city-card-description">Neon grit meets gold-leaf glitz in a wild, spicy blur of rooftop bars and street-side heat.</div>
+              <button class="btn-explore">Explore District</button>
+            </div>
           </div>
-        </div>
 
-        <div class="card">
-          <a href="#">
+          <!--  Seoul, South Korea  -->
+          <div class="city-card">
             <img src="images/Seoul, South Korea.jpg" alt="Seoul">
-          </a>
-          <div class="card_name">
-            <img src="https://img.icons8.com/ios/50/marker--v1.png" alt="marker--v1"/>
-            <span>Seoul, South Korea</span>
+            <div class="city-card-overlay"></div>
+            <div class="city-card-content">
+              <div class="city-card-tag refined">Top</div>
+              <div class="city-card-title"><i class="ri-map-pin-line"></i>Seoul, South Korea</div>
+              <div class="city-card-description">Cyberpunk neon spills over ancient palace walls in a 24/7 blur of underground clubs, sizzling BBQ, and high-tech glow.</div>
+              <button class="btn-explore">Explore District</button>
+            </div>
           </div>
-        </div>
-      
-        <div class="card">
-          <a href="#">
+
+          <!--  Tokyo   -->
+          <div class="city-card">
             <img src="images/Tokyo Skyline at night.jpg" alt="Tokyo">
-          </a>
-          <div class="card_name">
-            <img src="https://img.icons8.com/ios/50/marker--v1.png" alt="marker--v1"/>
-            <span>Tokyo, Japan</span>
-         </div>
-        </div>
+            <div class="city-card-overlay"></div>
+            <div class="city-card-content">
+            <div class="city-card-title"><i class="ri-map-pin-line"></i>Tokyo, Japan</div>
+            <div class="city-card-description">Electric neon meets quiet shrines in a fast-paced blur of midnight ramen and hidden alley bars.</div>
+            <button class="btn-explore">Explore District</button>
+            </div>
+          </div>
 
-        <div class="card">
-          <a href="#">
+          <!--  Malaysia  -->
+          <div class="city-card">
             <img src="images/Malaysia.jpg" alt="Malaysia">
-          </a>
-          <div class="card_name">
-            <img src="https://img.icons8.com/ios/50/marker--v1.png" alt="marker--v1"/>
-            <span>Malaysia</span>
+            <div class="city-card-overlay"></div>
+            <div class="city-card-content">
+              <div class="city-card-title"><i class="ri-map-pin-line"></i>Malaysia</div>
+              <div class="city-card-description">Twin peaks glow over smoky satay stalls in a lush, humid mix of rooftop luxury and chaotic street-side soul.</div>
+              <button class="btn-explore">Explore District</button>
+            </div>
           </div>
-        </div>
 
-        <div class="card">
-          <a href="#">
+          <!--    Vietnam   -->
+          <div class="city-card">
             <img src="images/Ho Chi Minh_ Vietnam.jpg" alt="Vietnam">
-          </a>
-          <div class="card_name">
-            <img src="https://img.icons8.com/ios/50/marker--v1.png" alt="marker--v1"/>
-            <span>Ho Chi Minh, Vietnam</span>
+            <div class="city-card-overlay"></div>
+            <div class="city-card-content">
+              <div class="city-card-title"><i class="ri-map-pin-line"></i>Vietnam</div>
+              <div class="city-card-description">Tangled wires and ancient yellow walls glow under red lanterns in a humid rush of motorbikes, street-side beer, and high-rise glam.</div>
+              <button class="btn-explore">Explore District</button>
           </div>
-        </div>
+          </div>
 
-        <div class="card">
-          <a href="#">
+          <!--  NYC -->
+          <div class="city-card">
             <img src="images/NYC.jpg" alt="NYC">
-          </a>
-          <div class="card_name">
-            <img src="https://img.icons8.com/ios/50/marker--v1.png" alt="marker--v1"/>
-            <span>NYC, USA</span>
+            <div class="city-card-overlay"></div>
+            <div class="city-card-content">
+              <div class="city-card-title"><i class="ri-map-pin-line"></i>New york City</div>
+              <div class="city-card-description">Sharp black coats and leather boots cut through a neon haze of steam, grit, and high-fashion hustle.</div>
+              <button class="btn-explore">Explore District</button>
+            </div>
           </div>
-        </div>
 
-        <div class="card">
-          <a href="#">
+          <!--  San Francisco -->
+          <div class="city-card">
             <img src="images/San Francisco, USA.jpg" alt="TSan Francisco">
-          </a>
-          <div class="card_name">
-            <img src="https://img.icons8.com/ios/50/marker--v1.png" alt="marker--v1"/>
-            <span>San Francisco, USA</span>
+            <div class="city-card-overlay"></div>
+            <div class="city-card-content">
+              <div class="city-card-title"><i class="ri-map-pin-line"></i>San Francisco</div>
+              <div class="city-card-description">Foggy hills and tech-fueled hoodies meet Victorian grit in a cool, salty blur.</div>
+              <button class="btn-explore">Explore District</button>
+            </div>
           </div>
-        </div>
-      </div>
-    </section> 
+
+        </div>  <!-- city-gallery -->
+      </section> 
 
     <br><br>
 
